@@ -19,6 +19,7 @@ ACTIVITY_TYPES = [
 ]
 CONTRACTOR_GROUP = "Contractor"
 UOMS = ["Running Foot"]
+WAREHOUSE_TYPES = ["Transit"]
 
 
 def create():
@@ -37,6 +38,7 @@ def create():
 def ensure_company():
 	if frappe.db.exists("Company", COMPANY):
 		return
+	ensure_company_prerequisites()
 	frappe.get_doc({
 		"doctype": "Company",
 		"company_name": COMPANY,
@@ -46,6 +48,12 @@ def ensure_company():
 		"chart_of_accounts": "Standard",
 		"create_chart_of_accounts_based_on": "Standard Template",
 	}).insert(ignore_permissions=True)
+
+
+def ensure_company_prerequisites():
+	"""Company creation links to records that ERPNext only seeds in its own install or setup wizard.
+	On a fresh site they can be missing, so add them first (for example Warehouse Type "Transit")."""
+	ensure_named("Warehouse Type", "name", WAREHOUSE_TYPES)
 
 
 def ensure_letter_head():

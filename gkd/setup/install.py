@@ -11,11 +11,23 @@ FAVICON = "/assets/gkd/images/gkd-favicon.png"
 
 def after_install():
 	configure()
-	masters.create()
+	create_masters()
 
 
 def after_migrate():
 	configure()
+	create_masters()
+
+
+def create_masters():
+	"""Demo masters link to records that ERPNext seeds in its setup wizard (Warehouse Type, All Item Groups,
+	All Supplier Groups). Before the wizard runs they do not exist, so wait; the next migrate or the wizard itself adds them."""
+	if frappe.is_setup_complete():
+		masters.create()
+
+
+def after_setup_wizard(args=None):
+	masters.create()
 
 
 def configure():

@@ -100,6 +100,7 @@ add_to_apps_screen = [
 # before_install = "gkd.install.before_install"
 after_install = "gkd.setup.install.after_install"
 after_migrate = "gkd.setup.install.after_migrate"
+setup_wizard_complete = "gkd.setup.install.after_setup_wizard"
 
 # Uninstallation
 # ------------
