@@ -1,0 +1,39 @@
+// Copyright (c) 2026, raaj@akhilaminc.com and contributors
+// For license information, please see license.txt
+
+frappe.query_reports["GKD Project Hours"] = {
+	filters: [
+		{
+			fieldname: "from_date",
+			label: __("From Date"),
+			fieldtype: "Date",
+			default: frappe.datetime.add_months(frappe.datetime.get_today(), -1),
+			reqd: 1,
+		},
+		{
+			fieldname: "to_date",
+			label: __("To Date"),
+			fieldtype: "Date",
+			default: frappe.datetime.get_today(),
+			reqd: 1,
+		},
+		{
+			fieldname: "project",
+			label: __("Project"),
+			fieldtype: "Link",
+			options: "Project",
+		},
+		{
+			fieldname: "employee",
+			label: __("Employee"),
+			fieldtype: "Link",
+			options: "Employee",
+		},
+		{
+			fieldname: "activity_type",
+			label: __("Activity Type"),
+			fieldtype: "Link",
+			options: "Activity Type",
+		},
+	],
+};

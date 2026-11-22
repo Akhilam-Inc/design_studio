@@ -1,0 +1,395 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-11-20 13:48:48.969296",
+ "default_print_format": "GKD BOQ for Client",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project",
+  "project_name",
+  "customer",
+  "company",
+  "column_break_header",
+  "boq_date",
+  "revision_no",
+  "prepared_by",
+  "site_supervisor",
+  "site_supervisor_user",
+  "workflow_state",
+  "amended_from",
+  "cad_section",
+  "cad_file",
+  "column_break_cad",
+  "cad_imported_on",
+  "items_section",
+  "items",
+  "totals_section",
+  "total_boq_amount",
+  "column_break_totals",
+  "total_site_amount",
+  "column_break_variance",
+  "variance_value",
+  "site_verification_section",
+  "visit_date",
+  "verified_by",
+  "column_break_site",
+  "site_remarks",
+  "site_photo_1",
+  "site_photo_2",
+  "customer_approval_section",
+  "customer_approved",
+  "approved_by_name",
+  "column_break_approval",
+  "approval_date",
+  "signed_copy"
+ ],
+ "fields": [
+  {
+   "default": "BOQ-.YYYY.-.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "BOQ-.YYYY.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.customer",
+   "fetch_if_empty": 1,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "project.company",
+   "fetch_if_empty": 1,
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_header",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "boq_date",
+   "fieldtype": "Date",
+   "label": "BOQ Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "revision_no",
+   "fieldtype": "Int",
+   "label": "Revision No"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "project.gkd_site_supervisor",
+   "fetch_if_empty": 1,
+   "fieldname": "site_supervisor",
+   "fieldtype": "Link",
+   "label": "Site Supervisor",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "site_supervisor.user_id",
+   "fieldname": "site_supervisor_user",
+   "fieldtype": "Link",
+   "label": "Site Supervisor User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "GKD Project BOQ",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "cad_section",
+   "fieldtype": "Section Break",
+   "label": "CAD Import"
+  },
+  {
+   "description": "Last quantity export imported from the drawing.",
+   "fieldname": "cad_file",
+   "fieldtype": "Attach",
+   "label": "CAD Export File",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cad",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cad_imported_on",
+   "fieldtype": "Datetime",
+   "label": "Imported On",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "BOQ Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "GKD BOQ Item",
+   "reqd": 0
+  },
+  {
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "total_boq_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total BOQ Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_totals",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Total of the approved quantities. This is the contract value.",
+   "fieldname": "total_site_amount",
+   "fieldtype": "Currency",
+   "label": "Approved Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_variance",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "description": "Latest quantity (actual, else site verified) against the BOQ quantity, at BOQ rates.",
+   "fieldname": "variance_value",
+   "fieldtype": "Currency",
+   "label": "Variance Value",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "site_verification_section",
+   "fieldtype": "Section Break",
+   "label": "Site Verification"
+  },
+  {
+   "fieldname": "visit_date",
+   "fieldtype": "Date",
+   "label": "Visit Date"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_site",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_remarks",
+   "fieldtype": "Small Text",
+   "label": "Site Remarks"
+  },
+  {
+   "fieldname": "site_photo_1",
+   "fieldtype": "Attach Image",
+   "label": "Site Photo 1"
+  },
+  {
+   "fieldname": "site_photo_2",
+   "fieldtype": "Attach Image",
+   "label": "Site Photo 2"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "customer_approval_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Approval"
+  },
+  {
+   "default": "0",
+   "fieldname": "customer_approved",
+   "fieldtype": "Check",
+   "label": "Customer Approved"
+  },
+  {
+   "fieldname": "approved_by_name",
+   "fieldtype": "Data",
+   "label": "Approved By (Customer)"
+  },
+  {
+   "fieldname": "column_break_approval",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "description": "Scan of the printed BOQ signed by the client. Needed before approval.",
+   "fieldname": "signed_copy",
+   "fieldtype": "Attach",
+   "label": "Signed Copy"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "link_display_mode": "Search",
+ "links": [],
+ "modified": "2026-11-20 15:14:56.544141",
+ "modified_by": "Administrator",
+ "module": "GKD Studio",
+ "name": "GKD Project BOQ",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "GKD Project Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "GKD Principal Designer",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "GKD Designer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "GKD Site Supervisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "GKD Accounts",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "project,customer",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "project_name",
+ "track_changes": 1
+}

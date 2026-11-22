@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-11-20 13:48:48.443458",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room_area",
+  "item",
+  "item_name",
+  "description",
+  "uom",
+  "trade",
+  "contractor",
+  "cad_ref",
+  "quantities_section",
+  "design_qty",
+  "boq_qty",
+  "site_verified_qty",
+  "approved_qty",
+  "actual_qty",
+  "column_break_rate",
+  "rate",
+  "amount",
+  "approved_amount",
+  "variance_pct"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "room_area",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room / Area"
+  },
+  {
+   "columns": 2,
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.description",
+   "fetch_if_empty": 1,
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "item.stock_uom",
+   "fetch_if_empty": 1,
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "trade",
+   "fieldtype": "Link",
+   "label": "Trade",
+   "options": "GKD Trade"
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "cad_ref",
+   "fieldtype": "Data",
+   "label": "CAD Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quantities_section",
+   "fieldtype": "Section Break",
+   "label": "Quantities"
+  },
+  {
+   "columns": 1,
+   "fieldname": "design_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Design Qty"
+  },
+  {
+   "columns": 1,
+   "fieldname": "boq_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "BOQ Qty"
+  },
+  {
+   "columns": 1,
+   "fieldname": "site_verified_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Site Verified Qty"
+  },
+  {
+   "description": "Site verified qty, or the BOQ qty if the row was not measured. The client approves this.",
+   "fieldname": "approved_qty",
+   "fieldtype": "Float",
+   "label": "Approved Qty",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "actual_qty",
+   "fieldtype": "Float",
+   "label": "Actual Qty"
+  },
+  {
+   "fieldname": "column_break_rate",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "columns": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_amount",
+   "fieldtype": "Currency",
+   "label": "Approved Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "variance_pct",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Variance %",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "link_display_mode": "Search",
+ "links": [],
+ "modified": "2026-11-20 15:14:56.047869",
+ "modified_by": "Administrator",
+ "module": "GKD Studio",
+ "name": "GKD BOQ Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

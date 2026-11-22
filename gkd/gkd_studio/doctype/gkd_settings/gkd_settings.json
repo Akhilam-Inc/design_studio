@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "creation": "2026-11-20 15:14:54.237314",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "variance_threshold_pct",
+  "po_lead_days"
+ ],
+ "fields": [
+  {
+   "default": "5",
+   "description": "BOQ rows whose variance is beyond this, plus or minus, are highlighted.",
+   "fieldname": "variance_threshold_pct",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Variance Threshold %",
+   "reqd": 1
+  },
+  {
+   "default": "7",
+   "description": "Required-by date on contractor orders, counted from the day they are created.",
+   "fieldname": "po_lead_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Contractor Order Lead Days",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "link_display_mode": "Search",
+ "links": [],
+ "modified": "2026-11-20 15:14:54.237314",
+ "modified_by": "Administrator",
+ "module": "GKD Studio",
+ "name": "GKD Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "GKD Principal Designer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "GKD Project Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "GKD Designer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "GKD Site Supervisor",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "GKD Accounts",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

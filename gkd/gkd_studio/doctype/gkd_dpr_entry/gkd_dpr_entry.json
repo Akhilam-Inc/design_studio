@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-11-20 15:14:54.900461",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "activity_type",
+  "hours",
+  "progress_pct",
+  "work_done",
+  "photo",
+  "blocker_section",
+  "has_blocker",
+  "blocker_category",
+  "comments"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project / Site",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "activity_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Activity",
+   "options": "Activity Type",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Hours",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "progress_pct",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Progress %"
+  },
+  {
+   "columns": 3,
+   "fieldname": "work_done",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Work Done",
+   "reqd": 1
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "blocker_section",
+   "fieldtype": "Section Break",
+   "label": "Blocker"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "has_blocker",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Blocker"
+  },
+  {
+   "depends_on": "has_blocker",
+   "fieldname": "blocker_category",
+   "fieldtype": "Select",
+   "label": "Blocker Category",
+   "mandatory_depends_on": "has_blocker",
+   "options": "\nMaterial Delay\nDrawing Clarification\nClient Decision\nLabour Shortage\nSite Access\nOther"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "link_display_mode": "Search",
+ "links": [],
+ "modified": "2026-11-20 15:14:54.900461",
+ "modified_by": "Administrator",
+ "module": "GKD Studio",
+ "name": "GKD DPR Entry",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

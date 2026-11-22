@@ -1,0 +1,1 @@
+BOQ {{ doc.name }} was verified at site on {{ doc.get_formatted('visit_date') }}. Review the variance, then send it to the customer.

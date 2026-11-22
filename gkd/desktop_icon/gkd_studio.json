@@ -1,0 +1,21 @@
+{
+ "app": "gkd",
+ "bg_color": "gray",
+ "creation": "2026-11-20 14:38:31.983470",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_type": "App",
+ "idx": 15,
+ "label": "GKD Studio",
+ "link": "/desk/design-studio",
+ "link_type": "External",
+ "logo_url": "/assets/gkd/images/gkd-logo.png",
+ "modified": "2026-11-20 16:28:47.728909",
+ "modified_by": "Administrator",
+ "name": "GKD Studio",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}

@@ -1,0 +1,1 @@
+BOQ {{ doc.name }} for {{ doc.project_name }} is ready for a site visit. Record the visit date and the site verified quantities, then click Verify.

@@ -1,0 +1,22 @@
+{
+ "app": "gkd",
+ "creation": "2026-11-20 14:32:24.988105",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon": "palette",
+ "icon_type": "Link",
+ "idx": 0,
+ "label": "Design Studio",
+ "link_to": "Design Studio",
+ "link_type": "Workspace Sidebar",
+ "logo_url": "/assets/gkd/icons/desktop_icons/solid/design_studio.svg",
+ "modified": "2026-11-20 14:38:32.147158",
+ "modified_by": "Administrator",
+ "name": "Design Studio",
+ "owner": "Administrator",
+ "parent_icon": "GKD Studio",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}

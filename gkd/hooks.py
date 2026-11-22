@@ -1,5 +1,5 @@
 app_name = "gkd"
-app_title = "Gkd"
+app_title = "GKD Studio"
 app_publisher = "raaj@akhilaminc.com"
 app_description = "GKD"
 app_email = "raaj@akhilaminc.com"
@@ -8,18 +8,20 @@ app_license = "mit"
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = ["erpnext"]
 
-# Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "gkd",
-# 		"logo": "/assets/gkd/logo.png",
-# 		"title": "Gkd",
-# 		"route": "/gkd",
-# 		"has_permission": "gkd.api.permission.has_app_permission",
-# 	}
-# ]
+app_home = "/desk/design-studio"
+
+# Shown as an app on the apps screen and as the App icon on the desktop grid, like Frappe HR.
+add_to_apps_screen = [
+	{
+		"name": "gkd",
+		"logo": "/assets/gkd/images/gkd-logo.png",
+		"title": "GKD Studio",
+		"route": app_home,
+		"has_permission": "gkd.setup.permissions.has_app_permission",
+	}
+]
 
 # The dock, the rail down the left of the desk, is a document rather than a hook. Author it in
 # Manage Dock on a developer-mode site and press Export to App, and it is written to
@@ -96,7 +98,8 @@ app_license = "mit"
 # ------------
 
 # before_install = "gkd.install.before_install"
-# after_install = "gkd.install.after_install"
+after_install = "gkd.setup.install.after_install"
+after_migrate = "gkd.setup.install.after_migrate"
 
 # Uninstallation
 # ------------
@@ -211,6 +214,8 @@ app_license = "mit"
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
+override_doctype_dashboards = {"Project": "gkd.overrides.project_dashboard.get_data"}
+
 # override_doctype_dashboards = {
 # 	"Task": "gkd.task.get_dashboard_data"
 # }

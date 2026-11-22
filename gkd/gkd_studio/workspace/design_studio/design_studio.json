@@ -1,0 +1,257 @@
+{
+ "charts": [
+  {
+   "chart_name": "GKD Hours by Project",
+   "label": "GKD Hours by Project"
+  },
+  {
+   "chart_name": "GKD Projects by Site Type",
+   "label": "GKD Projects by Site Type"
+  }
+ ],
+ "content": "[{\"id\": \"xb5sipmyd_\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"GKD Active Projects\", \"col\": 4}}, {\"id\": \"TRkekeDKiT\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"GKD Hours Logged Today\", \"col\": 4}}, {\"id\": \"lnD7OSbOuK\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"GKD Hours This Week\", \"col\": 4}}, {\"id\": \"fFTlLZZK4M\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"GKD Site Reports This Week\", \"col\": 4}}, {\"id\": \"Bf646liYsn\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"GKD Open BOQs\", \"col\": 4}}, {\"id\": \"wMs-YzB-gg\", \"type\": \"chart\", \"data\": {\"chart_name\": \"GKD Hours by Project\", \"col\": 12}}, {\"id\": \"Nzxn5uUUmF\", \"type\": \"chart\", \"data\": {\"chart_name\": \"GKD Projects by Site Type\", \"col\": 12}}, {\"id\": \"d2dc70c210\", \"type\": \"header\", \"data\": {\"text\": \"\\u003cspan class=\\\"h4\\\"\\u003e\\u003cb\\u003eYour shortcuts\\u003c/b\\u003e\\u003c/span\\u003e\", \"col\": 12}}, {\"id\": \"632723f546\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Projects\", \"col\": 3}}, {\"id\": \"1ca60436d7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Project BOQs\", \"col\": 3}}, {\"id\": \"dde031e399\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Daily Progress Reports\", \"col\": 3}}, {\"id\": \"e5a2efeb50\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"BOQ Variance\", \"col\": 3}}, {\"id\": \"24fa94c200\", \"type\": \"header\", \"data\": {\"text\": \"\\u003cspan class=\\\"h4\\\"\\u003e\\u003cb\\u003eStudio setup\\u003c/b\\u003e\\u003c/span\\u003e\", \"col\": 12}}, {\"id\": \"0014c7ca3c\", \"type\": \"card\", \"data\": {\"card_name\": \"Studio Masters\", \"col\": 4}}, {\"id\": \"5a9af973d7\", \"type\": \"card\", \"data\": {\"card_name\": \"Contracts & Orders\", \"col\": 4}}, {\"id\": \"c04140f18d\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "creation": "2026-11-20 13:53:59.240487",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "palette",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Design Studio",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Studio Masters",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GKD CAD Mapping",
+   "link_count": 0,
+   "link_to": "GKD CAD Mapping",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GKD Trade",
+   "link_count": 0,
+   "link_to": "GKD Trade",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Activity Type",
+   "link_count": 0,
+   "link_to": "Activity Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Supplier",
+   "link_count": 0,
+   "link_to": "Supplier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee",
+   "link_count": 0,
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contracts & Orders",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract",
+   "link_count": 0,
+   "link_to": "Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract Template",
+   "link_count": 0,
+   "link_to": "Contract Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Order",
+   "link_count": 0,
+   "link_to": "Purchase Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "GKD BOQ Variance",
+   "link_count": 0,
+   "link_to": "GKD BOQ Variance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "GKD Project Hours",
+   "link_count": 0,
+   "link_to": "GKD Project Hours",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GKD Settings",
+   "link_count": 0,
+   "link_to": "GKD Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-11-20 16:48:05.960411",
+ "modified_by": "Administrator",
+ "module": "GKD Studio",
+ "name": "Design Studio",
+ "number_cards": [
+  {
+   "label": "GKD Active Projects",
+   "number_card_name": "GKD Active Projects"
+  },
+  {
+   "label": "GKD Hours Logged Today",
+   "number_card_name": "GKD Hours Logged Today"
+  },
+  {
+   "label": "GKD Hours This Week",
+   "number_card_name": "GKD Hours This Week"
+  },
+  {
+   "label": "GKD Site Reports This Week",
+   "number_card_name": "GKD Site Reports This Week"
+  },
+  {
+   "label": "GKD Open BOQs",
+   "number_card_name": "GKD Open BOQs"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "GKD Principal Designer"
+  },
+  {
+   "role": "GKD Project Manager"
+  },
+  {
+   "role": "GKD Designer"
+  },
+  {
+   "role": "GKD Site Supervisor"
+  },
+  {
+   "role": "GKD Accounts"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 0.5,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Projects",
+   "link_to": "Project",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Project BOQs",
+   "link_to": "GKD Project BOQ",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Daily Progress Reports",
+   "link_to": "GKD Daily Progress Report",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "",
+   "label": "BOQ Variance",
+   "link_to": "GKD BOQ Variance",
+   "report_ref_doctype": "GKD Project BOQ",
+   "type": "Report"
+  }
+ ],
+ "standard": 1,
+ "title": "Design Studio",
+ "type": "Workspace"
+}

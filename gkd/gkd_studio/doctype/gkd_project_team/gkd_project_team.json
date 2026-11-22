@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-11-20 13:48:46.857635",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "role_in_project",
+  "allocation_pct"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "columns": 3,
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "role_in_project",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Role in Project",
+   "options": "\nProject Manager\nDesigner\nSite Supervisor\nDraftsman\nOther"
+  },
+  {
+   "columns": 2,
+   "fieldname": "allocation_pct",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Allocation %"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "link_display_mode": "Search",
+ "links": [],
+ "modified": "2026-11-20 13:48:46.857635",
+ "modified_by": "Administrator",
+ "module": "GKD Studio",
+ "name": "GKD Project Team",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

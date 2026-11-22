@@ -1,0 +1,51 @@
+Room,Layer,Block,Description,Length,Width,Count,Unit
+Living & Dining,A-FLOR-TILE,,Floor finish,6100,4270,1,mm
+Living & Dining,A-FLOR-SKRT,,Skirting run,19500,,1,mm
+Living & Dining,A-CLNG-GYPS,,Ceiling,6100,4270,1,mm
+Living & Dining,A-CLNG-COVE,,Cove perimeter,20740,,1,mm
+Living & Dining,E-LITE-STRP,,Cove LED strip,20740,,1,mm
+Living & Dining,E-LITE,DL-12W,Downlight,,,12,mm
+Living & Dining,E-LITE,PENDANT,Dining pendant,,,2,mm
+Living & Dining,A-WALL-PNT,,Wall N,6100,2900,1,mm
+Living & Dining,A-WALL-PNT,,Wall E,4270,2900,1,mm
+Living & Dining,A-WALL-PNT,,Wall S,6100,2900,1,mm
+Living & Dining,A-WALL-PNT,,Wall W,4270,2900,1,mm
+Living & Dining,A-WALL-PANL,,TV wall panelling,3050,2440,1,mm
+Living & Dining,A-FURN-CASE,TV-UNIT,TV unit front,2440,910,1,mm
+Living & Dining,E-POWR,,Switch and socket points,,,14,mm
+Living & Dining,E-DATA,,Data and TV points,,,3,mm
+Living & Dining,A-SOFT-CRTN,,Window curtain,3660,,1,mm
+Living & Dining,A-FURN-LOOS,SOFA-3S,3-seater sofa,,,1,mm
+Living & Dining,A-FURN-LOOS,DINING-6S,Dining table,,,1,mm
+Master Bedroom,A-FLOR-WOOD,,Floor finish,4270,3660,1,mm
+Master Bedroom,A-CLNG-GYPS,,Ceiling,4270,3660,1,mm
+Master Bedroom,A-FURN-CASE,WARDROBE-SLIDING,Wardrobe front,2440,2440,1,mm
+Master Bedroom,A-WALL-PNT,,Wall N,4270,2900,1,mm
+Master Bedroom,A-WALL-PNT,,Wall E,3660,2900,1,mm
+Master Bedroom,A-WALL-PNT,,Wall S,4270,2900,1,mm
+Master Bedroom,A-WALL-PNT,,Wall W,3660,2900,1,mm
+Master Bedroom,E-LITE,DL-12W,Downlight,,,6,mm
+Master Bedroom,E-POWR,,Switch and socket points,,,8,mm
+Master Bedroom,A-SOFT-CRTN,,Window curtain,2440,,1,mm
+Master Bedroom,A-DOOR,DOOR-FLUSH,Entry door,,,1,mm
+Master Bedroom,A-FURN-LOOS,BED-QUEEN,Queen bed (client's own),,,1,mm
+Bedroom 2,A-FLOR-WOOD,,Floor finish,3350,3050,1,mm
+Bedroom 2,A-CLNG-GYPS,,Ceiling,3350,3050,1,mm
+Bedroom 2,A-FURN-CASE,WARDROBE-SLIDING,Wardrobe front,1830,2440,1,mm
+Bedroom 2,A-WALL-PNT,,Walls N and S,3350,2900,2,mm
+Bedroom 2,A-WALL-PNT,,Walls E and W,3050,2900,2,mm
+Bedroom 2,E-LITE,DL-12W,Downlight,,,4,mm
+Bedroom 2,E-POWR,,Switch and socket points,,,6,mm
+Bedroom 2,A-DOOR,DOOR-FLUSH,Entry door,,,1,mm
+Kitchen,A-FLOR-TILE,,Floor finish,3050,2440,1,mm
+Kitchen,A-FURN-KTCH,KITCHEN-BASE,"Base run, sink wall",3660,,1,mm
+Kitchen,A-FURN-KTCH,KITCHEN-BASE,"Base run, hob wall",1830,,1,mm
+Kitchen,A-FURN-KTCH,KITCHEN-WALL,Wall run,2740,,1,mm
+Kitchen,A-CNTR-GRNT,,Counter top,5490,,1,mm
+Kitchen,E-POWR,,Switch and socket points,,,8,mm
+Kitchen,E-LITE,DL-12W,Downlight,,,3,mm
+Master Toilet,P-WTPF,,Floor and upturn,2440,1830,1,mm
+Master Toilet,A-GLAZ-PART,,Shower partition,1220,2130,1,mm
+Master Toilet,A-GLAZ-MIRR,,Vanity mirror,1220,910,1,mm
+Master Toilet,E-LITE,DL-12W,Downlight,,,2,mm
+Master Toilet,A-DOOR,DOOR-FLUSH,Entry door,,,1,mm
