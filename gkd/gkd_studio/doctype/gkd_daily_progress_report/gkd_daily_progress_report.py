@@ -7,6 +7,8 @@ from frappe.desk.doctype.notification_log.notification_log import enqueue_create
 from frappe.model.document import Document
 from frappe.utils import add_to_date, flt, get_datetime, now_datetime
 
+from gkd.gkd_studio.execution import post_quantities, validate_entries
+
 # Roles that may file or correct a report on behalf of someone else.
 MANAGER_ROLES = {"GKD Project Manager", "GKD Principal Designer", "System Manager"}
 
@@ -17,6 +19,7 @@ class GKDDailyProgressReport(Document):
 		self.total_hours = sum(flt(row.hours) for row in self.entries)
 		self.has_blockers = int(any(row.has_blocker for row in self.entries))
 		self.validate_one_report_per_day()
+		validate_entries(self)
 
 	def before_submit(self):
 		# A draft may hold only the check-in. The day's work must be in before it is submitted.
@@ -36,9 +39,11 @@ class GKDDailyProgressReport(Document):
 	def on_submit(self):
 		self.db_set("timesheet", self.make_timesheet())
 		self.update_projects()
+		post_quantities(self, 1)
 		self.notify_blockers()
 
 	def on_cancel(self):
+		post_quantities(self, -1)
 		if self.timesheet and frappe.db.get_value("Timesheet", self.timesheet, "docstatus") == 1:
 			timesheet = frappe.get_doc("Timesheet", self.timesheet)
 			timesheet.flags.ignore_permissions = True

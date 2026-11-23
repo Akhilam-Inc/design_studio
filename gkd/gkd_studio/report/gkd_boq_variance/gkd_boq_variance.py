@@ -40,7 +40,7 @@ class BOQVarianceReport:
 				"items.room_area as room_area", "items.item as item", "items.item_name as item_name",
 				"items.trade as trade", "items.uom as uom", "items.design_qty as design_qty",
 				"items.boq_qty as boq_qty", "items.site_verified_qty as site_verified_qty",
-				"items.actual_qty as actual_qty", "items.rate as rate",
+				"items.actual_qty as actual_qty", "items.executed_qty as executed_qty", "items.rate as rate",
 			],
 			order_by="name asc, items.idx asc",
 		)
@@ -81,6 +81,7 @@ class BOQVarianceReport:
 			col(_("Design Qty"), "design_qty", "Float", 95),
 			col(_("BOQ Qty"), "boq_qty", "Float", 90),
 			col(_("Site Qty"), "site_verified_qty", "Float", 90),
+			col(_("Executed Qty"), "executed_qty", "Float", 90),
 			col(_("Actual Qty"), "actual_qty", "Float", 90),
 			col(_("Rate"), "rate", "Currency", 100),
 			col(_("BOQ vs Design %"), "design_gap_pct", "Percent", 110),

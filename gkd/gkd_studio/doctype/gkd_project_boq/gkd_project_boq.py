@@ -49,6 +49,7 @@ class GKDProjectBOQ(Document):
 		for row in self.items:
 			latest = latest_qty(row)
 			row.variance_pct = (latest - flt(row.boq_qty)) / flt(row.boq_qty) * 100 if row.boq_qty else 0
+			row.execution_pct = flt(row.executed_qty) / approved_qty(row) * 100 if approved_qty(row) else 0
 
 	def set_totals(self):
 		self.total_boq_amount = sum(flt(row.amount) for row in self.items)
@@ -92,7 +93,10 @@ def approved_qty(row) -> float:
 
 
 def latest_qty(row) -> float:
-	"""The best-known quantity: executed, else measured, else the BOQ quantity itself (no variance)."""
+	"""The best-known quantity.
+
+	The final actual quantity wins. Work still in progress shows no gap until it passes the approved
+	quantity, because a half-done line is not a saving. Otherwise: measured, else the BOQ quantity."""
 	if row.actual_qty:
 		return flt(row.actual_qty)
-	return approved_qty(row)
+	return max(flt(row.executed_qty), approved_qty(row))

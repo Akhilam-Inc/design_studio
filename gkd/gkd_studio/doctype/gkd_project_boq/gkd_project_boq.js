@@ -148,7 +148,7 @@ const gkd_boq = {
 		let variance_value = 0;
 		for (const row of frm.doc.items || []) {
 			const approved = flt(row.site_verified_qty) || flt(row.boq_qty);
-			const latest = flt(row.actual_qty) || approved;
+			const latest = flt(row.actual_qty) || Math.max(flt(row.executed_qty), approved);
 			row.amount = flt(row.boq_qty) * flt(row.rate);
 			row.approved_qty = approved;
 			row.approved_amount = approved * flt(row.rate);

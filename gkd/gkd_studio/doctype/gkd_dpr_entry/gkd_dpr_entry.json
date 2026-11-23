@@ -13,6 +13,14 @@
   "progress_pct",
   "work_done",
   "photo",
+  "measured_section",
+  "boq_item",
+  "qty_done",
+  "item_finished",
+  "measured_col",
+  "boq",
+  "boq_line",
+  "qty_uom",
   "blocker_section",
   "has_blocker",
   "blocker_category",
@@ -64,6 +72,53 @@
    "fieldname": "photo",
    "fieldtype": "Attach Image",
    "label": "Photo"
+  },
+  {
+   "fieldname": "measured_section",
+   "fieldtype": "Section Break",
+   "label": "Measured Work"
+  },
+  {
+   "description": "ID of the BOQ row. The site app sends it.",
+   "fieldname": "boq_item",
+   "fieldtype": "Data",
+   "label": "BOQ Item Row"
+  },
+  {
+   "description": "Quantity done today, not a running total.",
+   "fieldname": "qty_done",
+   "fieldtype": "Float",
+   "label": "Quantity Done"
+  },
+  {
+   "default": "0",
+   "description": "Tick if no more work is left on this item.",
+   "fieldname": "item_finished",
+   "fieldtype": "Check",
+   "label": "Item Finished"
+  },
+  {
+   "fieldname": "measured_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "boq",
+   "fieldtype": "Link",
+   "label": "BOQ",
+   "options": "GKD Project BOQ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "boq_line",
+   "fieldtype": "Data",
+   "label": "BOQ Line",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qty_uom",
+   "fieldtype": "Data",
+   "label": "Unit",
+   "read_only": 1
   },
   {
    "fieldname": "blocker_section",

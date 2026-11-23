@@ -21,6 +21,8 @@
   "site_verified_qty",
   "approved_qty",
   "actual_qty",
+  "executed_qty",
+  "execution_pct",
   "column_break_rate",
   "rate",
   "amount",
@@ -123,7 +125,23 @@
    "allow_on_submit": 1,
    "fieldname": "actual_qty",
    "fieldtype": "Float",
-   "label": "Actual Qty"
+   "label": "Actual Qty",
+   "description": "The final executed quantity. Set when a report marks the item finished, or by hand."
+  },
+  {
+   "allow_on_submit": 1,
+   "description": "Total of the quantities from submitted daily reports.",
+   "fieldname": "executed_qty",
+   "fieldtype": "Float",
+   "label": "Executed Qty",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "execution_pct",
+   "fieldtype": "Percent",
+   "label": "Executed %",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_rate",
